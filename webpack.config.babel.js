@@ -146,7 +146,8 @@ const production = {
     }),
     new ReactStaticPlugin({
       routes: './src/routes.js',
-      template: './src/components/HTML.js'
+      template: './src/components/HTML.js',
+      renderToStaticMarkup: true
     }),
     new LoaderOptionsPlugin({
       minimize: true,
