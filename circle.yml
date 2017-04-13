@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: 6.5
+  services:
+    - docker
+
+test:
+  override:
+    - yarn run lint
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - NODE_ENV=production yarn run build
+      - FIREBASE_ENV=production yarn run deploy

@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "public": "build",
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/email",
+        "destination": "/email.html"
+      },
+      {
+        "source": "**",
+        "destination": "/404.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(css|js|jpg|png)",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=30672000"
+          }
+        ]
+      }
+    ]
+  }
+}

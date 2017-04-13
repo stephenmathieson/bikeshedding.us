@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bikeshedding.us</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+      analytics = {}
+      ;[
+        'trackSubmit', 'trackClick', 'trackLink', 'trackForm', 'pageview',
+        'identify', 'reset', 'group', 'track', 'ready', 'alias', 'debug',
+        'page', 'once', 'off', 'on'
+      ].forEach(x => analytics[x] = (...args) => console.log(x, ...args))
+    </script>
+  </head>
+  <body>
+    <div id='root'></div>
+  </body>
+</html>

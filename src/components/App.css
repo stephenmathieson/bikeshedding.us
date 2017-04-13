@@ -1,0 +1,25 @@
+.app {
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  height: auto;
+  min-height: 100%;
+}
+
+.content {
+  padding-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
