@@ -20,7 +20,13 @@ const HTML = ({ title, manifest, body }) => (
     </head>
     <body>
       <div id='root' dangerouslySetInnerHTML={{ __html: body }} />
-      <script src={manifest['bundle.js']} />
+      <script dangerouslySetInnerHTML={{ __html: `
+        window.addEventListener('load', function () {
+          var e = document.createElement('script')
+          e.src = "/${manifest['bundle.js']}"
+          document.body.appendChild(e)
+        })
+      ` }} />
     </body>
   </html>
 )
