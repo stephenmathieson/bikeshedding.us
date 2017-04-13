@@ -6,8 +6,9 @@ import App from '../components/App'
 class AppContainer extends Component {
   constructor () {
     super()
+
     this.state = {
-      color: randomcolor(),
+      color: '#adf9ff',
       rotate: false
     }
   }
